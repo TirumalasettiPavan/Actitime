@@ -10,6 +10,8 @@ public class HomePage {
 	private WebElement lgout;
 	@FindBy(xpath="//div[text()='Tasks']")
 	private WebElement taskTab;
+	@FindBy(xpath="//div[text()='Reports']")
+	private WebElement reportsTab;
 	
 	public HomePage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -20,6 +22,9 @@ public class HomePage {
 	}
 	public void setTaskTab() {
 		taskTab.click();
+	}
+	public void setReportsTab() {
+		reportsTab.click();
 	}
 
 }
